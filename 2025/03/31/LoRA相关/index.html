@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 
-  <html class="light page-category">
+  <html class="light page-post">
 
 
 <head>
   <meta charset="utf-8">
   
-  <title>category | Hexo</title>
+  <title>LoRA相关 | Hexo</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,13 +15,15 @@
     <meta name="keywords" content="reality,前端,算法，机器学习，AI，日常记录" />
   
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="category">
-<meta property="og:url" content="https://zyyy9.github.io/category/index.html">
+  <meta name="description" content="找到 LoRA 的核心文件最新版本 LoraModel 继承自 BaseTuner，核心是_create_and_replace函数中的target.update_layer函数 最后找到\peft\tuners\lora\layer.py，进行修改即可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LoRA相关">
+<meta property="og:url" content="https://zyyy9.github.io/2025/03/31/LoRA%E7%9B%B8%E5%85%B3/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="找到 LoRA 的核心文件最新版本 LoraModel 继承自 BaseTuner，核心是_create_and_replace函数中的target.update_layer函数 最后找到\peft\tuners\lora\layer.py，进行修改即可">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-30T15:37:56.508Z">
-<meta property="article:modified_time" content="2025-03-30T15:37:56.508Z">
+<meta property="article:published_time" content="2025-03-31T05:55:23.000Z">
+<meta property="article:modified_time" content="2025-04-01T06:16:24.376Z">
 <meta property="article:author" content="钟宇">
 <meta name="twitter:card" content="summary">
 
@@ -96,17 +98,8 @@ ga('send', 'pageview');
     <span id="toolbox-mobile" class="toolbox-mobile">Home</span>
   
 
-  <div class="content content-category">
-  <div class="page-header">
-
-  
-    <div class="breadcrumb">
-      <div class="location">分类</div>
-      <i class="icon-location"></i>
-    </div>
-  
-
-  
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
     <a class="toolbox-entry" href="/">
       <span class="toolbox-entry-text">Home</span>
@@ -174,193 +167,70 @@ ga('send', 'pageview');
   </div>
 
 
-
-  <div class="box-blog-info">
-    <a class="avatar" href="/">
-      <img src="https://plus.unsplash.com/premium_photo-1669138140804-a593bab110d2?ixid=MnwxMjA3fDB8MXx0b3BpY3x8dG93SlpGc2twR2d8fHx8fDJ8fDE2NzAzODIyMTU&amp;ixlib=rb-4.0.3&amp;w=300&amp;h=150&amp;fmt=webp" alt="" />
-    </a>
-    <div class="info">
-      <h3 class="name" style="font-family: calligraffittiregular">
-        reality
-      </h3>
-      <div class="slogan">
-        chase in the dark
-      </div>
-    </div>
-  </div>
-
 </div>
 
-  <section class="category-box">
-  <div class="category-title">分类</div>
-  <div class="category-list">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%BE%E5%88%B0-LoRA-%E7%9A%84%E6%A0%B8%E5%BF%83%E6%96%87%E4%BB%B6"><span class="toc-text">找到 LoRA 的核心文件</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-LoRA相关" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">LoRA相关</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2025.03.31</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>钟宇</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/LLM%E5%9F%BA%E7%A1%80/">LLM基础</a>
+  </span>
+
+
+
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
     
-      <a class="category-item" href="#LLM基础">
-        <span class="category-name">LLM基础</span>
-        <span class="category-size">( 3 )</span>
-      </a>
-    
-      <a class="category-item" href="#git">
-        <span class="category-name">git</span>
-        <span class="category-size">( 1 )</span>
-      </a>
-    
-      <a class="category-item" href="#hexo教程">
-        <span class="category-name">hexo教程</span>
-        <span class="category-size">( 1 )</span>
-      </a>
-    
-      <a class="category-item" href="#python语法">
-        <span class="category-name">python语法</span>
-        <span class="category-size">( 1 )</span>
-      </a>
-    
-      <a class="category-item" href="#pytorch环境">
-        <span class="category-name">pytorch环境</span>
-        <span class="category-size">( 1 )</span>
-      </a>
-    
-      <a class="category-item" href="#面经">
-        <span class="category-name">面经</span>
-        <span class="category-size">( 1 )</span>
-      </a>
+      <h2 id="找到-LoRA-的核心文件"><a href="#找到-LoRA-的核心文件" class="headerlink" title="找到 LoRA 的核心文件"></a>找到 LoRA 的核心文件</h2><p>最新版本 LoraModel 继承自 BaseTuner，核心是<code>_create_and_replace</code>函数中的<code>target.update_layer</code>函数</p>
+<p>最后找到\peft\tuners\lora\layer.py，进行修改即可</p>
+
     
   </div>
-</section>
 
-  <ul class="list-post"><li id="LLM基础" class="item-category-name item-title item-title-0">
-  <!--
-    <a href="" class="text-year">
-   -->
-    LLM基础
-    <span class="category-count">( 3 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">03-31</span>
-
-  
-  <a class="post-title" href="/2025/03/31/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E7%90%86%E7%9B%B8%E5%85%B3/">大模型数理相关</a>
+</article>
 
 
-</li>
-<li class="item-post item">
-  <span class="post-date">03-31</span>
-
-  
-  <a class="post-title" href="/2025/03/31/LoRA%E7%9B%B8%E5%85%B3/">LoRA相关</a>
+   
 
 
-</li>
-<li class="item-post item">
-  <span class="post-date">03-31</span>
 
-  
-  <a class="post-title" href="/2025/03/31/LLM%E8%AE%AD%E7%BB%83%E7%9B%B8%E5%85%B3/">LLM训练相关</a>
-
-
-</li>
-<li id="git" class="item-category-name item-title item-title-1">
-  <!--
-    <a href="" class="text-year">
-   -->
-    git
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">04-28</span>
-
-  
-  <a class="post-title" href="/2023/04/28/git%E6%8A%80%E5%B7%A7/">git技巧</a>
-
-
-</li>
-<li id="hexo教程" class="item-category-name item-title item-title-2">
-  <!--
-    <a href="" class="text-year">
-   -->
-    hexo教程
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">04-28</span>
-
-  
-  <a class="post-title" href="/2023/04/28/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">hexo使用教程</a>
-
-
-</li>
-<li id="python语法" class="item-category-name item-title item-title-3">
-  <!--
-    <a href="" class="text-year">
-   -->
-    python语法
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">03-31</span>
-
-  
-  <a class="post-title" href="/2025/03/31/python%E8%AF%AD%E6%B3%95/">python语法</a>
-
-
-</li>
-<li id="pytorch环境" class="item-category-name item-title item-title-4">
-  <!--
-    <a href="" class="text-year">
-   -->
-    pytorch环境
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">06-30</span>
-
-  
-  <a class="post-title" href="/2023/06/30/pytorch%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">anaconda、pytorch、jupyter环境配置</a>
-
-
-</li>
-<li id="面经" class="item-category-name item-title item-title-0">
-  <!--
-    <a href="" class="text-year">
-   -->
-    面经
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">04-17</span>
-
-  
-  <a class="post-title" href="/2025/04/17/%E6%B7%98%E5%A4%A9%E9%9D%A2%E7%BB%8F/">淘天面经</a>
-
-
-</li>
-</ul>
 </div>
 
 
   <a id="backTop" class="back-top">
     <i class="icon-angle-up"></i>
   </a>
-
-
 
 
 
